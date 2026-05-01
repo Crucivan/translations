@@ -1,34 +1,16 @@
 {
-    "heroNotFound": {
-        "title": "ヒーローが見つかりません",
-        "description": "お探しのヒーローページは存在しません。URLをご確認いただくか、全ヒーロー一覧からお探しください。",
-        "backToList": "全ヒーロー一覧を見る"
+    "notFound": {
+        "title": "ページが見つかりません",
+        "description": "お探しのページは存在しないか、移動された可能性があります。",
+        "backHome": "ホームへ戻る"
     },
-    "mapNotFound": {
-        "title": "マップが見つかりません",
-        "description": "お探しのマップページは存在しません。URLをご確認いただくか、全マップ一覧からお探しください。",
-        "backToList": "全マップ一覧を見る"
-    },
-    "general": {
-        "title": "問題が発生しました",
-        "description": "ページの読み込み中にエラーが発生しました。しばらくしてからもう一度お試しください。",
-        "tryThis": "こちらをお試しください",
-        "cacheHint": "ブラウザのキャッシュが古い場合、このような問題が発生することがあります。下のボタンを押してキャッシュをクリアし、再読み込みしてください。",
-        "clearCacheAndRefresh": "キャッシュクリア＆再読み込み",
-        "backToHome": "ホームに戻る"
-    },
-    "esports": {
-        "competition-not-found": {
-            "title": "大会が見つかりません",
-            "description": "お探しの大会は存在しないか、削除されました。"
-        },
-        "team-not-found": {
-            "title": "チームが見つかりません",
-            "description": "お探しのチームは存在しないか、削除されました。"
-        },
-        "match-not-found": {
-            "title": "試合が見つかりません",
-            "description": "お探しの試合は存在しないか、削除されました。"
-        }
+    "generic": {
+        "title": "一時的な問題が発生しました",
+        "description": "アップデート直後の場合、キャッシュの不一致が原因のことが多いです。下のボタンでほぼ解決します。",
+        "clearAndReload": "キャッシュをクリアして再読み込み",
+        "kbdHint": "またはショートカットで強制再読み込みできます",
+        "backHome": "ホームへ戻る",
+        "supportFooter": "それでも解決しない場合は<a>Discordでお知らせください</a>。",
+        "errorRef": "エラーID: {id}"
     }
 }
