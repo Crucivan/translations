@@ -79,11 +79,7 @@
             "keywords": "Overwatch, map stats, maps, OWtics, OWtics.GG, Overwatch map, Overwatch map pool"
         },
         "title": "Map Stats",
-        "description": "Hero win rates and pick rates per map. Every Overwatch map, grouped by mode.",
-        "toggle-variants": {
-            "show": "Show seasonal variants",
-            "hide": "Show base maps only"
-        }
+        "description": "Hero win rates and pick rates per map. Every Overwatch map, grouped by mode."
     },
     "map-details": {
         "meta": {
@@ -105,9 +101,6 @@
         "retired-notice": {
             "aria-label": "Retired map notice",
             "body": "This map is no longer part of the competitive map pool."
-        },
-        "seasonal-variants": {
-            "title": "Seasonal Variants"
         }
     },
     "matches": {
@@ -172,13 +165,14 @@
         "description": "Official Overwatch data · Updated daily",
         "tier-spread-aria": "Pick rate distribution across tiers",
         "tier-spread-win-aria": "Win rate distribution across tiers",
+        "tier-spread-ban-aria": "Ban rate distribution across tiers",
         "tier-legend-label": "Tiers",
         "tier-legend-aria": "Tier color legend",
-        "tier-legend-gmc": "GM+Champion",
         "columns": {
             "hero": "Hero",
             "tier-spread": "Pick by Tier",
-            "tier-spread-win": "Win by Tier"
+            "tier-spread-win": "Win by Tier",
+            "tier-spread-ban": "Ban by Tier"
         },
         "summary": {
             "title": "Top {role, select, Tank {Tank} Damage {Damage} Support {Support} other {}} Heroes",
@@ -196,6 +190,14 @@
             "label": "Compare",
             "ariaLabel": "Toggle compare mode for consistent axis scale",
             "tooltip": "Lock axis scale to compare hero positions across different filters"
+        },
+        "scatter": {
+            "quadrant": {
+                "strong": "Strong",
+                "weak": "Weak",
+                "niche": "Niche",
+                "popular": "Popular"
+            }
         },
         "error": {
             "no-data": "There is no data available for the selected filters.\nPlease try changing the filters or check back later."
@@ -361,7 +363,7 @@
                 "coming-soon-title": "No bracket available",
                 "coming-soon-description": "The bracket for this phase has not been set up yet.",
                 "no-data": "No bracket data available",
-                "scroll-hint": "\u2190 Scroll to see full bracket \u2192",
+                "scroll-hint": "← Scroll to see full bracket →",
                 "winners-bracket": "Winners Bracket",
                 "losers-bracket": "Losers Bracket",
                 "grand-final": "Grand Final",
@@ -418,6 +420,31 @@
                     "by-map": "Games by Map",
                     "total": "{count} total games",
                     "total-label": "Total Games"
+                },
+                "view": {
+                    "visual": "Visual",
+                    "table": "Table"
+                },
+                "visual": {
+                    "potm-empty-title": "POTM not yet awarded",
+                    "potm-empty-description": "Awards will appear after matches conclude.",
+                    "hero-bans-empty-title": "No hero bans recorded",
+                    "hero-bans-empty-description": "Ban history will appear once matches begin.",
+                    "maps-empty-title": "No maps played",
+                    "maps-empty-description": "Map statistics will appear after the first match.",
+                    "mode-empty-title": "No game modes recorded",
+                    "maps-total-suffix": "games"
+                },
+                "table": {
+                    "player": "Player",
+                    "hero": "Hero",
+                    "map": "Map",
+                    "role": "Role",
+                    "mode": "Mode",
+                    "potm": "POTM",
+                    "bans": "Bans",
+                    "plays": "Plays",
+                    "percentage": "%"
                 }
             },
             "meta": {

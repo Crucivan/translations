@@ -79,11 +79,7 @@
             "keywords": "鬥陣特攻, 地圖統計, 地圖, OWtics, OWtics.GG, 鬥陣特攻地圖, 鬥陣特攻地圖池"
         },
         "title": "地圖統計",
-        "description": "每張地圖的英雄勝率與選用率。所有鬥陣特攻地圖依模式分組。",
-        "toggle-variants": {
-            "show": "顯示限時版本",
-            "hide": "僅顯示基礎地圖"
-        }
+        "description": "每張地圖的英雄勝率與選用率。所有鬥陣特攻地圖依模式分組。"
     },
     "map-details": {
         "meta": {
@@ -105,9 +101,6 @@
         "retired-notice": {
             "aria-label": "退役地圖提示",
             "body": "此地圖已不在競技模式地圖池中。"
-        },
-        "seasonal-variants": {
-            "title": "限時版本"
         }
     },
     "matches": {
@@ -172,13 +165,14 @@
         "description": "鬥陣特攻官方數據 · 每日更新",
         "tier-spread-aria": "段位選取率分布",
         "tier-spread-win-aria": "段位勝率分布",
+        "tier-spread-ban-aria": "段位禁用率分布",
         "tier-legend-label": "段位",
         "tier-legend-aria": "段位顏色圖例",
-        "tier-legend-gmc": "宗師+冠軍",
         "columns": {
             "hero": "英雄",
             "tier-spread": "段位選取率",
-            "tier-spread-win": "段位勝率"
+            "tier-spread-win": "段位勝率",
+            "tier-spread-ban": "段位禁用率"
         },
         "summary": {
             "title": "{role, select, Tank {重裝} Damage {輸出} Support {輔助} other {}}熱門英雄",
@@ -196,6 +190,14 @@
             "label": "對比",
             "ariaLabel": "切換對比模式以固定座標軸範圍",
             "tooltip": "鎖定座標軸範圍，以便在不同篩選條件下對比英雄位置"
+        },
+        "scatter": {
+            "quadrant": {
+                "strong": "強勢",
+                "weak": "弱勢",
+                "niche": "小眾",
+                "popular": "流行"
+            }
         },
         "error": {
             "no-data": "所選篩選條件下暫無數據。\n請嘗試更改篩選條件或稍後再來查看。"
@@ -331,7 +333,7 @@
                 "coming-soon-title": "暫無對陣圖",
                 "coming-soon-description": "該階段的對陣圖尚未設定。",
                 "no-data": "暫無對陣圖資料",
-                "scroll-hint": "\u2190 滑動查看完整對陣圖 \u2192",
+                "scroll-hint": "← 滑動查看完整對陣圖 →",
                 "winners-bracket": "勝者組",
                 "losers-bracket": "敗者組",
                 "grand-final": "總決賽",
@@ -388,6 +390,31 @@
                     "by-map": "按地圖統計",
                     "total": "共{count}場比賽",
                     "total-label": "比賽總計"
+                },
+                "view": {
+                    "visual": "視覺化",
+                    "table": "表格"
+                },
+                "visual": {
+                    "potm-empty-title": "尚未統計POTM",
+                    "potm-empty-description": "比賽進行後將自動顯示",
+                    "hero-bans-empty-title": "暫無英雄禁用記錄",
+                    "hero-bans-empty-description": "比賽開始後顯示",
+                    "maps-empty-title": "尚未遊玩任何地圖",
+                    "maps-empty-description": "首場比賽後顯示",
+                    "mode-empty-title": "暫無記錄的遊戲模式",
+                    "maps-total-suffix": "場比賽"
+                },
+                "table": {
+                    "player": "選手",
+                    "hero": "英雄",
+                    "map": "地圖",
+                    "role": "角色",
+                    "mode": "模式",
+                    "potm": "POTM",
+                    "bans": "禁用",
+                    "plays": "場次",
+                    "percentage": "%"
                 }
             },
             "meta": {

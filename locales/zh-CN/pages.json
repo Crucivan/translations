@@ -79,11 +79,7 @@
             "keywords": "守望先锋, 地图统计, 地图, OWtics, OWtics.GG, 守望先锋地图, 守望先锋地图池"
         },
         "title": "地图统计",
-        "description": "每张地图的英雄胜率与选用率。所有守望先锋地图按模式分组。",
-        "toggle-variants": {
-            "show": "显示限时版本",
-            "hide": "仅显示基础地图"
-        }
+        "description": "每张地图的英雄胜率与选用率。所有守望先锋地图按模式分组。"
     },
     "map-details": {
         "meta": {
@@ -105,9 +101,6 @@
         "retired-notice": {
             "aria-label": "退役地图提示",
             "body": "此地图已不在竞技模式地图池中。"
-        },
-        "seasonal-variants": {
-            "title": "限时版本"
         }
     },
     "matches": {
@@ -172,13 +165,14 @@
         "description": "守望先锋官方数据 · 每日更新",
         "tier-spread-aria": "段位选取率分布",
         "tier-spread-win-aria": "段位胜率分布",
+        "tier-spread-ban-aria": "段位禁用率分布",
         "tier-legend-label": "段位",
         "tier-legend-aria": "段位颜色图例",
-        "tier-legend-gmc": "宗师+冠军",
         "columns": {
             "hero": "英雄",
             "tier-spread": "段位选取率",
-            "tier-spread-win": "段位胜率"
+            "tier-spread-win": "段位胜率",
+            "tier-spread-ban": "段位禁用率"
         },
         "summary": {
             "title": "{role, select, Tank {重装} Damage {输出} Support {辅助} other {}}热门英雄",
@@ -196,6 +190,14 @@
             "label": "对比",
             "ariaLabel": "切换对比模式以固定坐标轴范围",
             "tooltip": "锁定坐标轴范围，以便在不同筛选条件下对比英雄位置"
+        },
+        "scatter": {
+            "quadrant": {
+                "strong": "强势",
+                "weak": "弱势",
+                "niche": "小众",
+                "popular": "流行"
+            }
         },
         "error": {
             "no-data": "所选筛选条件下暂无数据。\n请尝试更改筛选条件或稍后再来查看。"
@@ -331,7 +333,7 @@
                 "coming-soon-title": "暂无对阵图",
                 "coming-soon-description": "该阶段的对阵图尚未设置。",
                 "no-data": "暂无对阵图数据",
-                "scroll-hint": "\u2190 滑动查看完整对阵图 \u2192",
+                "scroll-hint": "← 滑动查看完整对阵图 →",
                 "winners-bracket": "胜者组",
                 "losers-bracket": "败者组",
                 "grand-final": "总决赛",
@@ -388,6 +390,31 @@
                     "by-map": "按地图统计",
                     "total": "共{count}场比赛",
                     "total-label": "比赛总计"
+                },
+                "view": {
+                    "visual": "可视化",
+                    "table": "表格"
+                },
+                "visual": {
+                    "potm-empty-title": "尚未统计POTM",
+                    "potm-empty-description": "比赛进行后将自动显示",
+                    "hero-bans-empty-title": "暂无英雄禁用记录",
+                    "hero-bans-empty-description": "比赛开始后显示",
+                    "maps-empty-title": "尚未游玩任何地图",
+                    "maps-empty-description": "首场比赛后显示",
+                    "mode-empty-title": "暂无记录的游戏模式",
+                    "maps-total-suffix": "场比赛"
+                },
+                "table": {
+                    "player": "选手",
+                    "hero": "英雄",
+                    "map": "地图",
+                    "role": "角色",
+                    "mode": "模式",
+                    "potm": "POTM",
+                    "bans": "禁用",
+                    "plays": "场次",
+                    "percentage": "%"
                 }
             },
             "meta": {

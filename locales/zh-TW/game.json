@@ -109,9 +109,6 @@
         "CLASH": "衝突",
         "STADIUM": "競技場"
     },
-    "mapVariant": {
-        "seasonal": "限時版本"
-    },
     "tier": {
         "ALL": "{type, select, short {全部} long {所有段位} other {所有段位}}",
         "BRONZE": "{type, select, short {銅} long {青銅} other {青銅}}",
@@ -122,7 +119,7 @@
         "MASTER": "{type, select, short {大} long {大師} other {大師}}",
         "GRANDMASTER": "{type, select, short {宗} long {宗師} other {宗師}}",
         "CHAMPION": "{type, select, short {冠} long {冠軍} other {冠軍}}",
-        "TOP500": "{type, select, short {T500} long {前500名} other {前500名}}",
+        "GRANDMASTER_AND_CHAMPION": "{type, select, short {宗+} long {宗師與冠軍} other {宗師與冠軍}}",
         "ROOKIE": "{type, select, short {新} long {新秀} other {新秀}}",
         "NOVICE": "{type, select, short {初} long {初學者} other {初學者}}",
         "CONTENDER": "{type, select, short {競} long {競爭者} other {競爭者}}",

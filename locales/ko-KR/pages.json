@@ -79,11 +79,7 @@
             "keywords": "오버워치, 맵 통계, 맵, OWtics, OWtics.GG, 오버워치 맵, 오버워치 맵풀"
         },
         "title": "맵 통계",
-        "description": "맵별 영웅 승률과 픽률. 오버워치 모든 맵을 모드별로 정리.",
-        "toggle-variants": {
-            "show": "계절 변형 보기",
-            "hide": "기본 맵만 보기"
-        }
+        "description": "맵별 영웅 승률과 픽률. 오버워치 모든 맵을 모드별로 정리."
     },
     "map-details": {
         "meta": {
@@ -105,9 +101,6 @@
         "retired-notice": {
             "aria-label": "은퇴 맵 안내",
             "body": "이 맵은 더 이상 경쟁전 로테이션에 포함되지 않습니다."
-        },
-        "seasonal-variants": {
-            "title": "계절 변형"
         }
     },
     "matches": {
@@ -172,13 +165,14 @@
         "description": "공식 오버워치 데이터 기반 · 매일 갱신",
         "tier-spread-aria": "티어별 픽률 분포",
         "tier-spread-win-aria": "티어별 승률 분포",
+        "tier-spread-ban-aria": "티어별 밴률 분포",
         "tier-legend-label": "티어",
         "tier-legend-aria": "티어 색상 범례",
-        "tier-legend-gmc": "그마+챔피언",
         "columns": {
             "hero": "영웅",
             "tier-spread": "티어별 픽률",
-            "tier-spread-win": "티어별 승률"
+            "tier-spread-win": "티어별 승률",
+            "tier-spread-ban": "티어별 밴률"
         },
         "summary": {
             "title": "{role, select, Tank {돌격군} Damage {공격군} Support {지원군} other {}} 상위 영웅들",
@@ -196,6 +190,14 @@
             "label": "비교",
             "ariaLabel": "비교 모드 토글 (축 범위 고정)",
             "tooltip": "축 범위를 고정하여 필터 변경 시 영웅 위치를 비교할 수 있습니다"
+        },
+        "scatter": {
+            "quadrant": {
+                "strong": "강세",
+                "weak": "약세",
+                "niche": "비주류",
+                "popular": "메타"
+            }
         },
         "error": {
             "no-data": "선택한 필터에 대한 데이터가 없습니다.\n필터를 변경하거나 나중에 다시 확인해 주세요."
@@ -361,7 +363,7 @@
                 "coming-soon-title": "브라켓 없음",
                 "coming-soon-description": "이 페이즈의 브라켓이 아직 설정되지 않았습니다.",
                 "no-data": "브라켓 데이터가 없습니다",
-                "scroll-hint": "\u2190 스크롤하여 전체 브라켓 보기 \u2192",
+                "scroll-hint": "← 스크롤하여 전체 브라켓 보기 →",
                 "winners-bracket": "승자조",
                 "losers-bracket": "패자조",
                 "grand-final": "그랜드 파이널",
@@ -418,6 +420,31 @@
                     "by-map": "맵별 경기",
                     "total": "총 {count}경기",
                     "total-label": "총 경기"
+                },
+                "view": {
+                    "visual": "비주얼",
+                    "table": "테이블"
+                },
+                "visual": {
+                    "potm-empty-title": "POTM이 아직 집계되지 않았습니다",
+                    "potm-empty-description": "경기가 진행되면 자동으로 표시됩니다",
+                    "hero-bans-empty-title": "영웅 밴 기록이 없습니다",
+                    "hero-bans-empty-description": "경기가 시작되면 표시됩니다",
+                    "maps-empty-title": "플레이된 맵이 없습니다",
+                    "maps-empty-description": "첫 경기 이후 표시됩니다",
+                    "mode-empty-title": "기록된 게임 모드가 없습니다",
+                    "maps-total-suffix": "경기"
+                },
+                "table": {
+                    "player": "선수",
+                    "hero": "영웅",
+                    "map": "맵",
+                    "role": "역할",
+                    "mode": "모드",
+                    "potm": "POTM",
+                    "bans": "밴",
+                    "plays": "경기",
+                    "percentage": "%"
                 }
             },
             "meta": {

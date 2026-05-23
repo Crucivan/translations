@@ -109,9 +109,6 @@
         "CLASH": "Clash",
         "STADIUM": "Stadium"
     },
-    "mapVariant": {
-        "seasonal": "Seasonal"
-    },
     "tier": {
         "ALL": "{type, select, short {All} long {All Tiers} other {All Tiers}}",
         "BRONZE": "{type, select, short {B} long {Bronze} other {Bronze}}",
@@ -122,7 +119,7 @@
         "MASTER": "{type, select, short {M} long {Master} other {Master}}",
         "GRANDMASTER": "{type, select, short {GM} long {Grandmaster} other {Grandmaster}}",
         "CHAMPION": "{type, select, short {CH} long {Champion} other {Champion}}",
-        "TOP500": "{type, select, short {T500} long {Top 500} other {Top 500}}",
+        "GRANDMASTER_AND_CHAMPION": "{type, select, short {GM+} long {Grandmaster & Champion} other {Grandmaster & Champion}}",
         "ROOKIE": "{type, select, short {RK} long {Rookie} other {Rookie}}",
         "NOVICE": "{type, select, short {NV} long {Novice} other {Novice}}",
         "CONTENDER": "{type, select, short {CTD} long {Contender} other {Contender}}",

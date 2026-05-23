@@ -105,12 +105,9 @@
         "ESCORT": "호위",
         "HYBRID": "혼합",
         "PUSH": "밀기",
-        "FLASHPOINT": "점화",
+        "FLASHPOINT": "플래시포인트",
         "CLASH": "격돌",
         "STADIUM": "스타디움"
-    },
-    "mapVariant": {
-        "seasonal": "계절 한정"
     },
     "tier": {
         "ALL": "{type, select, short {전체} long {모든 티어} other {모든 티어}}",
@@ -122,7 +119,7 @@
         "MASTER": "{type, select, short {마} long {마스터} other {마스터}}",
         "GRANDMASTER": "{type, select, short {그마} long {그랜드마스터} other {그랜드마스터}}",
         "CHAMPION": "{type, select, short {챔} long {챔피언} other {챔피언}}",
-        "TOP500": "{type, select, short {랭} long {상위 500위} other {상위 500위}}",
+        "GRANDMASTER_AND_CHAMPION": "{type, select, short {그마+} long {그랜드마스터 & 챔피언} other {그랜드마스터 & 챔피언}}",
         "ROOKIE": "{type, select, short {루} long {루키} other {루키}}",
         "NOVICE": "{type, select, short {초} long {초심자} other {초심자}}",
         "CONTENDER": "{type, select, short {도} long {도전자} other {도전자}}",

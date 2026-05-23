@@ -109,9 +109,6 @@
         "CLASH": "クラッシュ",
         "STADIUM": "スタジアム"
     },
-    "mapVariant": {
-        "seasonal": "シーズン限定"
-    },
     "tier": {
         "ALL": "{type, select, short {全} long {全ティア} other {全ティア}}",
         "BRONZE": "{type, select, short {B} long {ブロンズ} other {ブロンズ}}",
@@ -122,7 +119,7 @@
         "MASTER": "{type, select, short {M} long {マスター} other {マスター}}",
         "GRANDMASTER": "{type, select, short {GM} long {グランドマスター} other {グランドマスター}}",
         "CHAMPION": "{type, select, short {CH} long {チャンピオン} other {チャンピオン}}",
-        "TOP500": "{type, select, short {T500} long {トップ500} other {トップ500}}",
+        "GRANDMASTER_AND_CHAMPION": "{type, select, short {GM+} long {グランドマスター & チャンピオン} other {グランドマスター & チャンピオン}}",
         "ROOKIE": "{type, select, short {RK} long {ルーキー} other {ルーキー}}",
         "NOVICE": "{type, select, short {NV} long {ノービス} other {ノービス}}",
         "CONTENDER": "{type, select, short {CTD} long {コンテンダー} other {コンテンダー}}",
