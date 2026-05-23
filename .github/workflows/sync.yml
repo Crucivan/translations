@@ -19,7 +19,7 @@ jobs:
       - name: Checkout translations
         uses: actions/checkout@v4
 
-      - name: Checkout owtics monorepo
+      - name: Checkout owtics
         uses: actions/checkout@v4
         with:
           repository: owtics/owtics
@@ -35,7 +35,7 @@ jobs:
             cp "$locale_dir"*.json "$target/"
           done
 
-      - name: Check for changes and create PR
+      - name: Create sync PR
         working-directory: _owtics
         env:
           GH_TOKEN: ${{ secrets.FRONTEND_SYNC_PAT }}
@@ -50,7 +50,6 @@ jobs:
             exit 0
           fi
 
-          # Detect new locales (directories with JSON but no index.ts barrel)
           NEW_LOCALES=""
           for dir in frontend/src/shared/i18n/locales/*/; do
             locale=$(basename "$dir")
@@ -59,7 +58,6 @@ jobs:
             fi
           done
 
-          # Summarize changed files
           CHANGED=$(git diff --cached --name-only | head -20)
 
           # Close existing open sync PRs to avoid duplicates
@@ -70,13 +68,11 @@ jobs:
 
           BRANCH="translations/sync-$(date +%Y%m%d-%H%M%S)"
           git checkout -b "$BRANCH"
-          git commit -m "chore: sync community translations
-
-          Source: https://github.com/owtics/translations"
-
+          git commit \
+            -m "chore: sync community translations" \
+            -m "Source: https://github.com/owtics/translations"
           git push origin "$BRANCH"
 
-          # Build PR body
           {
             echo "Automated sync from [owtics/translations](https://github.com/owtics/translations)."
             echo ""
