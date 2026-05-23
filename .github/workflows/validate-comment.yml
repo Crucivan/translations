@@ -1,0 +1,86 @@
+name: Comment Validation Result
+
+# Posts the PR comment that validate.yml can't — fork PRs downgrade GITHUB_TOKEN to read-only.
+# workflow_run runs in base-repo context with full token. We don't check out PR code;
+# artifact contents are untrusted, so PR number is integer-parsed and output is fenced.
+
+on:
+  workflow_run:
+    workflows: ["Validate Translations"]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download PR comment payload
+        uses: actions/download-artifact@v8
+        with:
+          name: pr-comment-payload
+          path: ./payload
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post or update PR comment
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const prNumberRaw = fs.readFileSync(path.join('payload', 'pr-number'), 'utf-8').trim();
+            const prNumber = Number.parseInt(prNumberRaw, 10);
+            if (!Number.isInteger(prNumber) || prNumber <= 0) {
+              core.setFailed(`Invalid PR number in artifact: ${JSON.stringify(prNumberRaw)}`);
+              return;
+            }
+
+            const outcomeRaw = fs.readFileSync(path.join('payload', 'outcome'), 'utf-8').trim();
+            const passed = outcomeRaw === 'success';
+            const emoji = passed ? '✅' : '❌';
+            const label = passed ? 'passed' : 'failed';
+
+            // Escape inner ``` so untrusted output can't break out of the fence below.
+            let output = fs.readFileSync(path.join('payload', 'validate-output.txt'), 'utf-8').trim();
+            output = output.replace(/```/g, '``​`');
+
+            const body = [
+              `## ${emoji} Translation Validation (${label})`,
+              '',
+              '```',
+              output,
+              '```',
+              '',
+              '<sub>Updated by CI</sub>',
+            ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            const existing = comments.find(c =>
+              c.user?.type === 'Bot' && c.body?.includes('Translation Validation')
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }
