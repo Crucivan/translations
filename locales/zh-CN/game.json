@@ -118,8 +118,8 @@
         "DIAMOND": "{type, select, short {钻} long {钻石} other {钻石}}",
         "MASTER": "{type, select, short {大} long {大师} other {大师}}",
         "GRANDMASTER": "{type, select, short {宗} long {宗师} other {宗师}}",
-        "CHAMPION": "{type, select, short {冠} long {冠军} other {冠军}}",
-        "GRANDMASTER_AND_CHAMPION": "{type, select, short {宗+} long {宗师与冠军} other {宗师与冠军}}",
+        "CHAMPION": "{type, select, short {英} long {英杰} other {英杰}}",
+        "GRANDMASTER_AND_CHAMPION": "{type, select, short {宗+} long {宗师与英杰} other {宗师与英杰}}",
         "ROOKIE": "{type, select, short {新} long {新秀} other {新秀}}",
         "NOVICE": "{type, select, short {初} long {初学者} other {初学者}}",
         "CONTENDER": "{type, select, short {竞} long {竞争者} other {竞争者}}",
@@ -134,7 +134,7 @@
         "ban-rate": "禁用率",
         "kda": "KDA",
         "ichi-rating": "ICHI评分",
-        "top-500-player-count": "前500名玩家",
+        "top-500-player-count": "500强",
         "pick-rate-short": "选取",
         "win-rate-short": "胜率"
     }
